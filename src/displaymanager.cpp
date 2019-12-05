@@ -52,7 +52,10 @@ DisplayManagerX11Mediator::~DisplayManagerX11Mediator()
 
 bool DisplayManagerX11Mediator::setRotation(Rotation rotation)
 {
-  return XRRSetScreenConfig(display, screenConfiguration, appRootWindow, configurationId, rotation,  QX11Info::getTimestamp());
+  bool result;
+  result = XRRSetScreenConfig(display, screenConfiguration, appRootWindow, configurationId, rotation,  QX11Info::getTimestamp());
+  system("~/.scripts/brightness.sh eq eDP-1");
+  return result;
 }
 
 
