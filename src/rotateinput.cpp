@@ -178,5 +178,5 @@ void RotateInput::rotate(Orientation orientation)
     }
   }
 #endif
-  system("~/.scripts/brightness.sh eq eDP-1.sh");
+  system("~/.scripts/brightness.sh eq eDP-1");
 }
